@@ -638,6 +638,11 @@ def main(_):
         # if FLAGS.use_tpu:
         #     eval_steps = int(len(eval_examples) / FLAGS.eval_batch_size)
         # eval_drop_remainder = True if FLAGS.use_tpu else False
+        if FLAGS.use_tpu:
+            eval_steps = int(len(eval_examples) / FLAGS.eval_batch_size)
+        eval_drop_remainder = True if FLAGS.use_tpu else False
+
+        
         eval_input_fn = file_based_input_fn_builder(
             input_file=eval_file,
             seq_length=FLAGS.max_seq_length,
