@@ -648,7 +648,7 @@ def main(_):
             seq_length=FLAGS.max_seq_length,
             is_training=False,
             drop_remainder=eval_drop_remainder)
-        result = estimator.evaluate(input_fn=eval_input_fn, )
+        result = estimator.evaluate(input_fn=eval_input_fn)
         output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
         with open(output_eval_file,"w") as wf:
             logging.info("***** Eval results *****")
