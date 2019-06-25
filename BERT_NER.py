@@ -642,7 +642,7 @@ def main(_):
             eval_steps = int(len(eval_examples) / FLAGS.eval_batch_size)
         eval_drop_remainder = True if FLAGS.use_tpu else False
 
-        
+
         eval_input_fn = file_based_input_fn_builder(
             input_file=eval_file,
             seq_length=FLAGS.max_seq_length,
@@ -681,7 +681,7 @@ def main(_):
             input_file=predict_file,
             seq_length=FLAGS.max_seq_length,
             is_training=False,
-            drop_remainder=False)
+            drop_remainder=True)
 
         result = estimator.predict(input_fn=predict_input_fn)
         output_predict_file = os.path.join(FLAGS.output_dir, "label_test.txt")
