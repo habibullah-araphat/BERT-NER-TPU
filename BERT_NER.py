@@ -224,7 +224,7 @@ class NerProcessor(DataProcessor):
         "[PAD]" for padding
         :return:
         """
-        return ["[PAD]","B-MISC", "I-MISC", "O", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC", "X","[CLS]","[SEP]"]
+        return ["[PAD]", "O", "X","[CLS]","[SEP]", "Skills", "College_Name", "Graduation_Year", "Designation", "Companies_worked_at", "Email_Address", "Location", "Name", "Degree", "Years_of_Experience", "UNKNOWN"]
 
     def _create_example(self, lines, set_type):
         examples = []
