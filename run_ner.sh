@@ -18,7 +18,7 @@ export BERT_BASE_DIR=gs://test-bert-konok/cased_L-12_H-768_A-12
     --max_seq_length=128   \
     --train_batch_size=32   \
     --learning_rate=2e-5   \
-    --num_train_epochs=60.0   \
+    --num_train_epochs=40.0   \
     --output_dir=gs://test-bert-konok/output-for-bertner/
 
 
